@@ -19,4 +19,15 @@
 @theme {
   --font-manrope: "Manrope", sans-serif;
   --font-right-slab: "PP Right Slab", serif;
+
+  --text-title: clamp(2rem, 4vw, 2.5rem);
+  --text-subtitle: clamp(1.125rem, 2.5vw, 1.25rem);
+  --text-content: clamp(1rem, 2vw, 1.125rem);
+  --text-meta: clamp(0.875rem, 1.5vw, 1rem);
+}
+
+
+:root{
+  background-color: #F8F7F7;
+  padding: 80px 44px;
 }
