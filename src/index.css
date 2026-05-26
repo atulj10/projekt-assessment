@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Manrope";
+  src: url("./assets/fonts/Manrope_Complete/Manrope_Complete/Fonts/WEB/fonts/Manrope-Variable.woff2") format("woff2");
+  font-weight: 200 800;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PP Right Slab";
+  src: url("./assets/fonts/Manrope_Complete/PR Right Slab/PP Right Slab - Light.ttf") format("truetype");
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+
+@theme {
+  --font-manrope: "Manrope", sans-serif;
+  --font-right-slab: "PP Right Slab", serif;
+}
