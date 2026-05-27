@@ -61,11 +61,11 @@ const IndoorPlaygroundCard = () => {
       </span>
 
       <CircleFrame>
-        <div className="p-2 border-3 border-dashed border-gray-200 rounded mt-2 bg-[#F4F4F4]">
+        <div className="bg-[#F4F4F4]">
           <img
             src={kidExploring}
             alt="Kid exploring miniature nature playground"
-            className="w-full h-56 object-cover object-center rounded-sm"
+            className="w-full h-56 object-cover object-center"
           />
         </div>
       </CircleFrame>
