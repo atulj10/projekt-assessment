@@ -27,7 +27,21 @@
 }
 
 
-:root{
+:root {
   background-color: #F8F7F7;
   padding: 80px 120px;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  :root {
+    padding: 60px 48px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  :root {
+    padding: 40px 20px;
+  }
 }
