@@ -3,7 +3,16 @@ import CircleFrame from "./CircleFrame";
 
 const IndoorPlaygroundCard = () => {
   return (
-    <div className="bg-[linear-gradient(180deg,_#0098A7_0%,_#00191B_100%)]  rounded-xl p-6 pb-8 shadow-xl relative lg:col-start-2 lg:row-start-1 lg:row-span-3 h-full flex flex-col items-start justify-between pt-20">
+    <div
+      className="bg-[linear-gradient(180deg,_#0098A7_0%,_#00191B_100%)] 
+  rounded-xl 
+  p-6 pb-8 
+  relative 
+  lg:col-start-2 lg:row-start-1 lg:row-span-3 
+  h-full flex flex-col items-start justify-between pt-20 
+  origin-top-left rotate-[-6deg] translate-x-[-45px]
+  shadow-[0px_9px_20px_0px_#00000063,0px_36px_36px_0px_#00000057,0px_82px_49px_0px_#00000033,0px_145px_58px_0px_#0000000F,0px_227px_64px_0px_#00000003]"
+    >
       <div
         className="absolute -top-4 -left-4 z-30 flex h-[58px] w-[58px] items-center justify-center rounded-full"
         style={{
@@ -60,7 +69,6 @@ const IndoorPlaygroundCard = () => {
           Age 3-12
         </span>
       </div>
-
       <CircleFrame>
         <div className="bg-[#F4F4F4]">
           <img

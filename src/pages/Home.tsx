@@ -5,9 +5,11 @@ import Main from "../components/home/Main";
 const Home = () => {
   return (
     <>
-      <Header />
-      <Main />
-      <Footer />
+      <div className="flex flex-col gap-20">
+        <Header />
+        <Main />
+        <Footer />
+      </div>
     </>
   );
 };
