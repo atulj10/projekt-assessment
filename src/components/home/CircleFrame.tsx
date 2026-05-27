@@ -1,8 +1,8 @@
 import type { ReactNode } from "react";
 import Circle from "./Circle";
 
-const TOP_COUNT = 14;
-const SIDE_COUNT = 10;
+const TOP_COUNT = 18;
+const SIDE_COUNT = 12;
 
 interface CircleFrameProps {
   children: ReactNode;
@@ -13,13 +13,13 @@ const CircleFrame = ({ children }: CircleFrameProps) => {
     <div className="relative">
       <div className="absolute top-0 left-0 flex w-full justify-between -translate-y-1/2 px-1">
         {Array.from({ length: TOP_COUNT }).map((_, i) => (
-          <Circle color="#01545C" key={`top-${i}`} />
+          <Circle size={12} color="#01545C" key={`top-${i}`} />
         ))}
       </div>
 
       <div className="absolute bottom-0 left-0 flex w-full justify-between translate-y-1/2 px-1">
         {Array.from({ length: TOP_COUNT }).map((_, i) => (
-          <Circle color="#011C1F" key={`bottom-${i}`} />
+          <Circle size={12} color="#011C1F" key={`bottom-${i}`} />
         ))}
       </div>
 
@@ -27,7 +27,7 @@ const CircleFrame = ({ children }: CircleFrameProps) => {
         {Array.from({ length: SIDE_COUNT }).map((_, i) => (
           <div
             key={`left-${i}`}
-            className="h-4 w-4 rounded-full"
+            className="h-[12px] w-[12px] rounded-full"
             style={{
               background:
                 "linear-gradient(to right, transparent 50%, #011C1F 50%)",
@@ -40,7 +40,7 @@ const CircleFrame = ({ children }: CircleFrameProps) => {
         {Array.from({ length: SIDE_COUNT }).map((_, i) => (
           <div
             key={`right-${i}`}
-            className="h-4 w-4 rounded-full"
+            className="h-[12px] w-[12px] rounded-full"
             style={{
               background:
                 "linear-gradient(to left, transparent 50%, #011C1F 50%)",
