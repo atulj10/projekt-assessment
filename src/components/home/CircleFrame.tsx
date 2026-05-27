@@ -8,26 +8,18 @@ interface CircleFrameProps {
   children: ReactNode;
 }
 
-interface HalfCircleProps {
-  direction: "top" | "bottom" | "left" | "right";
-  color: string;
+interface CutoutCircleProps {
+  color?: string;
 }
 
-const HalfCircle = ({ direction, color }: HalfCircleProps) => {
-  const gradients = {
-    top: `linear-gradient(to bottom, transparent 46%, ${color} 54%)`,
-    bottom: `linear-gradient(to top, transparent 46%, ${color} 54%)`,
-    left: `linear-gradient(to right, transparent 46%, ${color} 54%)`,
-    right: `linear-gradient(to left, transparent 46%, ${color} 54%)`,
-  };
-
+const CutoutCircle = ({ color = "#021316" }: CutoutCircleProps) => {
   return (
     <div
       className="rounded-full shrink-0"
       style={{
         width: SIZE,
         height: SIZE,
-        background: gradients[direction],
+        backgroundColor: color,
       }}
     />
   );
@@ -36,31 +28,31 @@ const HalfCircle = ({ direction, color }: HalfCircleProps) => {
 const CircleFrame = ({ children }: CircleFrameProps) => {
   return (
     <div className="relative overflow-hidden">
-      {/* TOP */}
-      <div className="absolute top-0 left-0 flex w-full justify-between -translate-y-1/2 px-1 pointer-events-none z-20">
+      {/* TOP CUTOUTS */}
+      <div className="absolute top-0 left-0 z-20 flex w-full justify-between px-1 -translate-y-1/2 pointer-events-none">
         {Array.from({ length: TOP_COUNT }).map((_, i) => (
-          <HalfCircle key={`top-${i}`} direction="top" color="#01545C" />
+          <CutoutCircle key={`top-${i}`} color="#01545C" />
         ))}
       </div>
 
-      {/* BOTTOM */}
-      <div className="absolute bottom-0 left-0 flex w-full justify-between translate-y-1/2 px-1 pointer-events-none z-20">
+      {/* BOTTOM CUTOUTS */}
+      <div className="absolute bottom-0 left-0 z-20 flex w-full justify-between px-1 translate-y-1/2 pointer-events-none">
         {Array.from({ length: TOP_COUNT }).map((_, i) => (
-          <HalfCircle key={`bottom-${i}`} direction="bottom" color="#011C1F" />
+          <CutoutCircle key={`bottom-${i}`} color="#012E32" />
         ))}
       </div>
 
-      {/* LEFT */}
-      <div className="absolute left-0 top-0 flex h-full flex-col justify-between -translate-x-1/2 py-1 pointer-events-none z-20">
+      {/* LEFT CUTOUTS */}
+      <div className="absolute top-0 left-0 z-20 flex h-full flex-col justify-between py-1 -translate-x-1/2 pointer-events-none">
         {Array.from({ length: SIDE_COUNT }).map((_, i) => (
-          <HalfCircle key={`left-${i}`} direction="left" color="#011C1F" />
+          <CutoutCircle key={`left-${i}`} color="#012E32" />
         ))}
       </div>
 
-      {/* RIGHT */}
-      <div className="absolute right-0 top-0 flex h-full flex-col justify-between translate-x-1/2 py-1 pointer-events-none z-20">
+      {/* RIGHT CUTOUTS */}
+      <div className="absolute top-0 right-0 z-20 flex h-full flex-col justify-between py-1 translate-x-1/2 pointer-events-none">
         {Array.from({ length: SIDE_COUNT }).map((_, i) => (
-          <HalfCircle key={`right-${i}`} direction="right" color="#011C1F" />
+          <CutoutCircle key={`right-${i}`} color="#012E32" />
         ))}
       </div>
 
