@@ -32,6 +32,13 @@
   padding: 80px 120px;
 }
 
+/* 13–15 inch laptops */
+@media (max-width: 1440px) {
+  :root {
+    padding: 70px 50px;
+  }
+}
+
 /* Tablet */
 @media (max-width: 1024px) {
   :root {

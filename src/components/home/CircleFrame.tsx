@@ -1,51 +1,66 @@
 import type { ReactNode } from "react";
-import Circle from "./Circle";
 
 const TOP_COUNT = 18;
 const SIDE_COUNT = 12;
+const SIZE = 12;
 
 interface CircleFrameProps {
   children: ReactNode;
 }
 
+interface HalfCircleProps {
+  direction: "top" | "bottom" | "left" | "right";
+  color: string;
+}
+
+const HalfCircle = ({ direction, color }: HalfCircleProps) => {
+  const gradients = {
+    top: `linear-gradient(to bottom, transparent 46%, ${color} 54%)`,
+    bottom: `linear-gradient(to top, transparent 46%, ${color} 54%)`,
+    left: `linear-gradient(to right, transparent 46%, ${color} 54%)`,
+    right: `linear-gradient(to left, transparent 46%, ${color} 54%)`,
+  };
+
+  return (
+    <div
+      className="rounded-full shrink-0"
+      style={{
+        width: SIZE,
+        height: SIZE,
+        background: gradients[direction],
+      }}
+    />
+  );
+};
+
 const CircleFrame = ({ children }: CircleFrameProps) => {
   return (
-    <div className="relative">
-      <div className="absolute top-0 left-0 flex w-full justify-between -translate-y-1/2 px-1">
+    <div className="relative overflow-hidden">
+      {/* TOP */}
+      <div className="absolute top-0 left-0 flex w-full justify-between -translate-y-1/2 px-1 pointer-events-none z-20">
         {Array.from({ length: TOP_COUNT }).map((_, i) => (
-          <Circle size={12} color="#01545C" key={`top-${i}`} />
+          <HalfCircle key={`top-${i}`} direction="top" color="#01545C" />
         ))}
       </div>
 
-      <div className="absolute bottom-0 left-0 flex w-full justify-between translate-y-1/2 px-1">
+      {/* BOTTOM */}
+      <div className="absolute bottom-0 left-0 flex w-full justify-between translate-y-1/2 px-1 pointer-events-none z-20">
         {Array.from({ length: TOP_COUNT }).map((_, i) => (
-          <Circle size={12} color="#011C1F" key={`bottom-${i}`} />
+          <HalfCircle key={`bottom-${i}`} direction="bottom" color="#011C1F" />
         ))}
       </div>
 
-      <div className="absolute left-0 top-0 flex h-full flex-col justify-between -translate-x-1/2 py-1">
+      {/* LEFT */}
+      <div className="absolute left-0 top-0 flex h-full flex-col justify-between -translate-x-1/2 py-1 pointer-events-none z-20">
         {Array.from({ length: SIDE_COUNT }).map((_, i) => (
-          <div
-            key={`left-${i}`}
-            className="h-[12px] w-[12px] rounded-full"
-            style={{
-              background:
-                "linear-gradient(to right, transparent 50%, #011C1F 50%)",
-            }}
-          />
+          <HalfCircle key={`left-${i}`} direction="left" color="#011C1F" />
         ))}
       </div>
 
-      <div className="absolute right-0 top-0 flex h-full flex-col justify-between translate-x-1/2 py-1">
+      {/* RIGHT */}
+      <div className="absolute right-0 top-0 flex h-full flex-col justify-between translate-x-1/2 py-1 pointer-events-none z-20">
         {Array.from({ length: SIDE_COUNT }).map((_, i) => (
-          <div
-            key={`right-${i}`}
-            className="h-[12px] w-[12px] rounded-full"
-            style={{
-              background:
-                "linear-gradient(to left, transparent 50%, #011C1F 50%)",
-            }}
-          />
+          <HalfCircle key={`right-${i}`} direction="right" color="#011C1F" />
         ))}
       </div>
 
