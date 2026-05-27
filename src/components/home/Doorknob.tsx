@@ -1,7 +1,7 @@
 const Doorknob = () => {
   return (
     <div
-      className=" absolute top-0 left-0 z-30 flex h-[58px] w-[58px] items-center justify-center rounded-full"
+      className="flex h-[58px] w-[58px] items-center justify-center rounded-full"
       style={{
         background:
           "linear-gradient(135deg, #d9d9d9 0%, #9a9a9a 45%, #3d3d3d 100%)",

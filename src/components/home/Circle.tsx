@@ -1,6 +1,4 @@
-const CIRCLE_SIZE = 16;
-
-const Circle = ({ color = "#F8F7F7", size = CIRCLE_SIZE }) => {
+const Circle = ({ color = "var(--color-off-white)", size = 16 }) => {
   return (
     <div
       className="shrink-0 rounded-full"

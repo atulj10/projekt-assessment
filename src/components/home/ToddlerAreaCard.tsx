@@ -1,18 +1,18 @@
 const ToddlerAreaCard = () => {
   return (
-    <div className="bg-[#CFFCBF] rounded-xl p-6  overflow-hidden relative min-h-[320px] lg:col-start-1 lg:row-start-2 lg:row-span-2 h-full flex flex-col justify-between">
+    <div className="bg-toddler-bg rounded-xl p-6 overflow-hidden relative min-h-[320px] lg:col-start-1 lg:row-start-2 lg:row-span-2 h-full flex flex-col justify-between">
       <div className="relative z-10 flex flex-col items-start">
-        <h2 className="text-[40px] text-[#112A06] font-right-slab leading-tight mb-3">
+        <h2 className="text-[40px] text-toddler-text font-right-slab leading-tight mb-3">
           Toddler Area
         </h2>
-        <p className="text-[#112A06] text-[18px] mb-6 font-manrope leading-relaxed w-11/12">
+        <p className="text-toddler-text text-lg mb-6 font-manrope leading-relaxed w-11/12">
           A space where a 2-year-old can explore without you holding your
           breath. Soft surfaces, safe equipment, no big kids.
         </p>
       </div>
 
       <div className="relative z-10 flex items-end">
-        <span className="bg-[#1C400B] text-[#CFFCBF] font-manrope text-[16px] font-semibold px-4 py-2 rounded inline-block">
+        <span className="bg-toddler-badge text-toddler-bg font-manrope text-base font-semibold px-4 py-2 rounded inline-block">
           Age 3-12
         </span>
       </div>
