@@ -1,6 +1,6 @@
 const ToddlerAreaCard = () => {
   return (
-    <div className="bg-[#CFFCBF] rounded-xl p-6 shadow-sm overflow-hidden relative min-h-[320px] lg:col-start-1 lg:row-start-2 lg:row-span-2 h-full flex flex-col justify-between">
+    <div className="bg-[#CFFCBF] rounded-xl p-6  overflow-hidden relative min-h-[320px] lg:col-start-1 lg:row-start-2 lg:row-span-2 h-full flex flex-col justify-between">
       <div className="relative z-10 flex flex-col items-start">
         <h2 className="text-[40px] text-[#112A06] font-right-slab leading-tight mb-3">
           Toddler Area
@@ -26,11 +26,11 @@ const ToddlerAreaCard = () => {
           borderTopRightRadius: "50%",
         }}
       >
-        <div className="w-6 h-10 bg-white rounded-full flex items-center justify-center relative shadow-inner">
-          <div className="w-5.5 h-5 bg-black rounded-full absolute bottom-1.5"></div>
+        <div className="w-[24.74px] h-[49.48px] bg-white rounded-full flex items-center justify-center relative shadow-inner">
+          <div className="w-[21.47px] h-[21.47px] bg-black rounded-full absolute bottom-1"></div>
         </div>
-        <div className="w-6 h-10 bg-white rounded-full flex items-center justify-center relative shadow-inner">
-          <div className="w-5.5 h-5 bg-black rounded-full absolute bottom-1.5"></div>
+        <div className="w-[24.74px] h-[49.48px] bg-white rounded-full flex items-center justify-center relative shadow-inner">
+          <div className="w-[21.47px] h-[21.47px] bg-black rounded-full absolute bottom-1"></div>
         </div>
       </div>
     </div>

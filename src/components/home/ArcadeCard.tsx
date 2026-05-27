@@ -1,6 +1,6 @@
 const ArcadeCard = () => {
   return (
-    <div className="bg-[#E9D6FF] rounded-xl p-6 shadow-sm lg:col-start-3 lg:row-start-2 lg:row-span-1 h-full flex flex-col items-start justify-center">
+    <div className="bg-[#E9D6FF] rounded-xl p-6  lg:col-start-3 lg:row-start-2 lg:row-span-1 h-full flex flex-col items-start justify-center">
       <h2 className="text-[40px] text-[#37005C] font-right-slab leading-tight mb-3">
         Arcade
       </h2>

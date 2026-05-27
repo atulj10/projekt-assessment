@@ -1,6 +1,6 @@
 const JungleGymCard = () => {
   return (
-    <div className="bg-[#FFE7EA] rounded-xl p-6 shadow-sm lg:col-start-1 lg:row-start-1 lg:row-span-1 h-full flex flex-col items-start justify-center">
+    <div className="bg-[#FFE7EA] rounded-xl p-6 lg:col-start-1 lg:row-start-1 lg:row-span-1 h-full flex flex-col items-start justify-center">
       <h2 className="text-[40px] text-[#6B0018] font-right-slab leading-tight mb-3">
         Jungle Gym
       </h2>

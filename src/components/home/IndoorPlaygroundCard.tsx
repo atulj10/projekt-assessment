@@ -4,8 +4,14 @@ import Doorknob from "./Doorknob";
 
 const IndoorPlaygroundCard = () => {
   return (
-    <div className="relative h-full lg:col-start-2 lg:row-start-1 lg:row-span-3">
-      <div className="absolute -top-2 -left-14 z-30 pointer-events-none">
+    <div
+      className="relative h-full lg:col-start-2 lg:row-start-1 lg:row-span-3 origin-top-left 
+          rotate-[-6deg]
+          translate-x-[-45px]
+          max-sm:translate-x-[-30px]
+          shadow-[12px_12px_20px_0px_#00000063,24px_24px_36px_0px_#00000057,48px_48px_49px_0px_#00000033,72px_72px_58px_0px_#0000000F] rounded-xl"
+    >
+      <div className="absolute -top-2 -left-2 z-30 pointer-events-none">
         <Doorknob />
       </div>
 
@@ -18,10 +24,6 @@ const IndoorPlaygroundCard = () => {
           h-full
           flex flex-col items-start justify-between
           pt-20
-          origin-top-left
-          rotate-[-6deg]
-          translate-x-[-45px]
-          shadow-[12px_12px_20px_0px_#00000063,24px_24px_36px_0px_#00000057,48px_48px_49px_0px_#00000033,72px_72px_58px_0px_#0000000F]
         "
         style={{
           WebkitMaskImage:
